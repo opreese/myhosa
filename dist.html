@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Get your lat/lng position</button>
+<br>
+<form action="calc_dist.php" method="post">
+Lat<p id="slat"></p>
+Lng<p id="slng"></p>
+Enter destination zip code<br>
+<input type="hidden" name="loc_lat" id="lat">
+<input type="hidden" name="loc_lng" id="lng">
+<input type="text" name="dest_zip"><br><br>
+<input type="submit" value="Check Distance">
+</form>
+<script>
+var lat = document.getElementById("lat");
+var lng = document.getElementById("lng");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    lat.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  lat.value = position.coords.latitude; 
+  lng.value = position.coords.longitude;
+  slat.innerHTML = position.coords.latitude; 
+  slng.innerHTML = position.coords.longitude;
+}
+</script>
+
+</body>
+</html>

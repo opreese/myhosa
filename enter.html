@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
+<title>My Hours of Service Availability (MyHOSA.com)</title>
+</head>
+<body>
+<div style="text-align:center">
+<a href="index.html">MyHOSA.com</a><br>
+<form action="submit_hosa.php" method="post">
+Enter the date and time<br>(mm/dd/yy hrmm)<br>
+Please use 24 hour time format & EST zone<br>
+For example: 07/23/19 1755<br>
+<input type="text" name="dtz" size="30" max="30"><br><br>
+Enter current hours of service available<br>
+70: <input type="text" name="hosa70" size="2" max="2"> 
+14: <input type="text" name="hosa14" size="2" max="2"> 
+11: <input type="text" name="hosa11" size="2" max="2"><br>
+Enter current break hours pending if applicable<br>
+10: <input type="text" name="hosa10" size="2" max="2"> 
+34: <input type="text" name="hosa34" size="2" max="2"><br><br>
+Enter your daily onduty hours for the last 7 days. See Notes below.<br>
+Yesterday <input type="text" name="odh1" size="2" max="2"><br>
+2 days ago<input type="text" name="odh2" size="2" max="2"><br>
+3 days ago<input type="text" name="odh3" size="2" max="2"><br>
+4 days ago<input type="text" name="odh4" size="2" max="2"><br>
+5 days ago<input type="text" name="odh5" size="2" max="2"><br>
+6 days ago<input type="text" name="odh6" size="2" max="2"><br>
+7 days ago<input type="text" name="odh7" size="2" max="2"><br><br>
+Please enter this stuff if you know know it.<br>
+Enter estimated hours of service available when Empty<br>
+70: <input type="text" name="est_empty_hosa70" size="2" max="2"> 
+14: <input type="text" name="est_empty_hosa14" size="2" max="2"> 
+11: <input type="text" name="est_empty_hosa11" size="2" max="2"><br>
+Enter estimated hours of service available when Loaded<br>
+70: <input type="text" name="est_loaded_hosa70" size="2" max="2"> 
+14: <input type="text" name="est_loaded_hosa14" size="2" max="2"> 
+11: <input type="text" name="est_loaded_hosa11" size="2" max="2"><br>
+<br>
+Enter current location (city, state [or] zipcode [or] at shipper [or] at delivery etc...)<br>
+<input type="text" name="current_location" size="30" max="30"><br>
+<br>
+Enter current status (empty, loaded, waiting to get loaded, resting, enroute [to pickup, to delivery], broke down, etc.<br>
+<input type="text" name="current_status" size="30" max="30"><br>
+<br>
+Enter notes (max 100 characters)<br>
+<input type="text" name="notes" size="30"><br>
+<br>
+<input type="submit" value="Submit">
+</form>
+</div>
+<br><br>
+Notes:<br>
+It's called rolling your logs.<br>
+If you are almost out of hours on your 70 and you want to keep working instead of doing a 34 hour reset, it may be possible that you will pickup enough hours from 8 days ago. In order to help your dispacther / broker assess this possibility then please enter your onduty hours for the last 7 days.<br>Note: Total Daily Onduty hours are each days combined hours (on duty + driving)<br>
+<br>
+Hours entered in the 7 days ago box are the hours you will pick up tomorrow becuause by tomorrow those hours will be from 8 days ago and not included in the total onduty hours worked in the last 7 days.
+</body>
+</html> 
